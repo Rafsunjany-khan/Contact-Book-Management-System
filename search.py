@@ -1,17 +1,21 @@
 import csv
 file_name = "contacts.csv"
 
-print("CBMS -> SEARCH CONTACT")
-search = input("Enter Searching Name:  ")
+def search_contact(search_name):
+    found = False
 
-with open("contacts.csv", "r") as file:
-    cont = csv.DictReader(file)
+    with open(file_name, "r") as file:
+        contacts = csv.DictReader(file)
 
-    for x in cont:
-        if search in {x['Name']}:
-            print(f"Name: {x['Name']}")
-            print(f"Email: {x['Email']}")
-            print(f"Phone Number: {x['Phone Number']}")
-            print(f"Address: {x['Address']}")
-        else:
-            print("No Data Found!")
+        for cont in contacts:
+            if search_name.strip().lower() in cont['Name'].strip().lower():
+                print(f"Name: {cont['Name']}")
+                print(f"Email: {cont['Email']}")
+                print(f"Phone Number: {cont['Phone Number']}")
+                print(f"Address: {cont['Address']}")
+                found = True
+
+    if not found:
+        print(f"{search_name}: Related No Data Found!")
+
+
