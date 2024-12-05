@@ -17,7 +17,7 @@ def remove_contacts():
             else:
                 found = True
     if found:
-        print(f"Name: {remove_contacts} removed successfully!")
+        print(f"Name: {remove_data} removed successfully!")
     else:
         print(f"{remove_data} : No Record Found!")
 

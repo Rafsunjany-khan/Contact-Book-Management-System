@@ -4,8 +4,8 @@ import view
 import remove
 
 print("Welcome To Contact Book Management System")
-print("1. For Add User Contact")
-print("2. For View Contact")
+print("1. For View Contact")
+print("2. For Add Contact")
 print("3. For Search Contact")
 print("4. For Remove Contact")
 print("5. For Exit")
